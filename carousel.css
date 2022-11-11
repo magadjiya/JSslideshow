@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0; 
+}
+body{
+    height: 100vh;
+}
+.sliders {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.slide > img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    justify-content: center;
+    margin: auto;
+}
+.slide[data-active]{
+    opacity: 1;
+}
+button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(250%);
+    color: rgb(85, 61, 61);
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0 3px;
+    background-color: rgb(207, 202, 202);
+}
+button:hover{
+    color: rgb(180, 163, 163);
+}
+.caption{
+    color: rgb(146, 128, 128);
+    padding: 8px 10px;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+.previous{
+    left: 1rem;
+}
+.next{
+    right: 1rem;
+}
